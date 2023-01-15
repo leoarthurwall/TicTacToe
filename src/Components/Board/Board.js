@@ -15,11 +15,23 @@ const Board = () => {
     { id: 8, value: "" },
   ]);
 
+  const handleCounterClick = (e) => {
+    console.log(e.target.id);
+    
+  };
+
   return (
     <div className={styles.container}>
       {boxes.map((box, index) => (
-        <div className={styles.box} key={index} value={box.value}>
-          <h2 className={styles.counter}>{box.value}</h2>
+        <div
+          className={styles.box}
+          id={box.id}
+          key={index}
+          onClick={handleCounterClick}
+        >
+          <h2 className={styles.counter} id={box.id}>
+            {box.value}
+          </h2>
         </div>
       ))}
     </div>

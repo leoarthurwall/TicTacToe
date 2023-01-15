@@ -16,9 +16,10 @@ const Board = () => {
   ]);
 
   const handleCounterClick = (e) => {
-    console.log(e.target.id);
-    
-  };
+    console.log("box id:", e.target.id);
+    //match the id of boxes array to clicked box
+    //update value to 0 or X
+  }
 
   return (
     <div className={styles.container}>

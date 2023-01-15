@@ -4,20 +4,22 @@ import { useState } from "react";
 
 const Board = () => {
   const [boxes, setBoxes] = useState([
-    { id: 0, value: "" },
-    { id: 1, value: "" },
-    { id: 2, value: "" },
-    { id: 3, value: "" },
-    { id: 4, value: "" },
-    { id: 5, value: "0" },
-    { id: 6, value: "X" },
-    { id: 7, value: "" },
-    { id: 8, value: "" },
+    { id: "0", value: "" },
+    { id: "1", value: "" },
+    { id: "2", value: "" },
+    { id: "3", value: "" },
+    { id: "4", value: "" },
+    { id: "5", value: "0" },
+    { id: "6", value: "X" },
+    { id: "7", value: "" },
+    { id: "8", value: "" },
   ]);
 
   const handleCounterClick = (e) => {
     console.log("box id:", e.target.id);
     //match the id of boxes array to clicked box
+    const clickedBox = boxes.find(box => box.id === e.target.id)
+    console.log({clickedBox})
     //update value to 0 or X
   }
 

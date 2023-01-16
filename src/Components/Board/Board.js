@@ -16,12 +16,21 @@ const Board = () => {
   ]);
 
   const handleCounterClick = (e) => {
-    console.log("box id:", e.target.id);
     //match the id of boxes array to clicked box
-    const clickedBox = boxes.find(box => box.id === e.target.id)
-    console.log({clickedBox})
+    const clickedBox = boxes.find((box) => box.id === e.target.id);
+    console.log({ clickedBox });
     //update value to 0 or X
-  }
+    // setBoxes(clickedBox.value === "0");
+
+    const updatedValue = [...boxes].map((box) => {
+      if (box.id === e.target.id) {
+        box.value = "0"
+      }
+      return box
+    });
+    setBoxes(updatedValue)
+    console.log({updatedValue})
+  };
 
   return (
     <div className={styles.container}>

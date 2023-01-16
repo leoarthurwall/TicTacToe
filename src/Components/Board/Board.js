@@ -9,27 +9,33 @@ const Board = () => {
     { id: "2", value: "" },
     { id: "3", value: "" },
     { id: "4", value: "" },
-    { id: "5", value: "0" },
-    { id: "6", value: "X" },
+    { id: "5", value: "" },
+    { id: "6", value: "" },
     { id: "7", value: "" },
     { id: "8", value: "" },
   ]);
+  const [count, setCount] = useState(0);
 
   const handleCounterClick = (e) => {
-    //match the id of boxes array to clicked box
-    const clickedBox = boxes.find((box) => box.id === e.target.id);
-    console.log({ clickedBox });
-    //update value to 0 or X
-    // setBoxes(clickedBox.value === "0");
-
     const updatedValue = [...boxes].map((box) => {
       if (box.id === e.target.id) {
-        box.value = "0"
+        if (count % 2 === 0) {
+          box.value = "0";
+        } else {
+          box.value = "X";
+        }
       }
-      return box
+      setCount(count + 1);
+      return box;
     });
-    setBoxes(updatedValue)
-    console.log({updatedValue})
+    setBoxes(updatedValue);
+    console.log({ updatedValue });
+    console.log(
+      "value length",
+      boxes.value
+
+      // set number of boxes to 0 if
+    );
   };
 
   return (

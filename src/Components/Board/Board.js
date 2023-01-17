@@ -1,28 +1,22 @@
 import React from "react";
 import styles from "./Board.module.css";
 import { useState } from "react";
+import Counters from "../Counters/Counters";
 
 const Board = () => {
   const [boxes, setBoxes] = useState(Array(9).fill(""));
+  const [isX, setIsX] = useState(true)
 
-  const handleCounterClick = () => {
-    
+  const handleCounterClick = (box) => {
   }
+
 
 
   console.log({boxes})
   return (
     <div className={styles.container}>
       {boxes.map((box, index) => (
-        <div
-          className={styles.box}
-          key={index}
-          onClick={handleCounterClick}
-        >
-          <h2 className={styles.counter} >
-            {box.value}
-          </h2>
-        </div>
+        <Counters box={box} key={index} />
       ))}
     </div>
   );

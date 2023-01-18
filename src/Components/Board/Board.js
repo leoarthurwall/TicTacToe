@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Board.module.css";
 import { useState } from "react";
+import Player from "../Player/Player";
 
 const Board = () => {
   const [isX, setIsX] = useState(true);
@@ -19,36 +20,37 @@ const Board = () => {
   const handleCounterClick = (index) => {
     boxes.map((newBox, i) => {
       if (i === index) {
-        if (newBox.value === "") 
-        {if (isX === true) {
-          newBox.value = "X";
-        } else {
-          newBox.value = "0";
+        if (newBox.value === "") {
+          if (isX === true) {
+            newBox.value = "X";
+          } else {
+            newBox.value = "0";
+          }
+          setIsX(!isX);
         }
-        setIsX(!isX);
-      }}
+      }
       return newBox;
     });
   };
 
   console.log({ boxes });
   return (
-    <div className={styles.container}>
-      {boxes.map((box, index) => (
-        <div
-          className={styles.box}
-          id={box.id}
-          key={index}
-          onClick={() => {
-            handleCounterClick(index);
-          }}
-        >
-          <div className={styles.counter} id={box.id}>
-            {box.value}
+    <section className={styles.wrapper}>
+      <div className={styles.container}>
+        {boxes.map((box, index) => (
+          <div
+            className={styles.box}
+            key={index}
+            onClick={() => {
+              handleCounterClick(index);
+            }}
+          >
+            <div className={styles.counter}>{box.value}</div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+      <Player />
+    </section>
   );
 };
 

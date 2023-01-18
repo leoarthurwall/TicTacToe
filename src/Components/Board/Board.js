@@ -6,9 +6,9 @@ const Board = () => {
   const [isX, setIsX] = useState(true);
   const [boxes, setBoxes] = useState([
     { id: 1, value: "" },
-    { id: 2, value: "X" },
-    { id: 3, value: "X" },
-    { id: 4, value: "0" },
+    { id: 2, value: "" },
+    { id: 3, value: "" },
+    { id: 4, value: "" },
     { id: 5, value: "" },
     { id: 6, value: "" },
     { id: 7, value: "" },
@@ -17,14 +17,21 @@ const Board = () => {
   ]);
 
   const handleCounterClick = (index) => {
-    const newBoxexArray = boxes.map((newBox, i) => {
+    boxes.map((newBox, i) => {
       if (i === index) {
-        console.log("hello");
-      }
+        if (newBox.value === "") 
+        {if (isX === true) {
+          newBox.value = "X";
+        } else {
+          newBox.value = "0";
+        }
+        setIsX(!isX);
+      }}
+      return newBox;
     });
-    console.log({ index });
   };
 
+  console.log({ boxes });
   return (
     <div className={styles.container}>
       {boxes.map((box, index) => (

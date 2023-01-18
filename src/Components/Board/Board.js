@@ -16,11 +16,26 @@ const Board = () => {
     { id: 9, value: "" },
   ]);
 
- 
+  const handleCounterClick = (index) => {
+    const newBoxexArray = boxes.map((newBox, i) => {
+      if (i === index) {
+        console.log("hello");
+      }
+    });
+    console.log({ index });
+  };
+
   return (
     <div className={styles.container}>
       {boxes.map((box, index) => (
-        <div className={styles.box} id={box.id} key={index}>
+        <div
+          className={styles.box}
+          id={box.id}
+          key={index}
+          onClick={() => {
+            handleCounterClick(index);
+          }}
+        >
           <div className={styles.counter} id={box.id}>
             {box.value}
           </div>

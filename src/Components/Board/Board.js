@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./Board.module.css";
 import { useState } from "react";
-import Counters from "../Counters/Counters";
 
 const Board = () => {
   const [isX, setIsX] = useState(true);
   const [boxes, setBoxes] = useState([
     { id: 1, value: "" },
-    { id: 2, value: "" },
+    { id: 2, value: "X" },
     { id: 3, value: "X" },
     { id: 4, value: "0" },
     { id: 5, value: "" },
@@ -17,19 +16,15 @@ const Board = () => {
     { id: 9, value: "" },
   ]);
 
-  console.log({ boxes });
+ 
   return (
     <div className={styles.container}>
-      {boxes.map((box) => (
-        <Counters
-          box={box}
-          key={box.id}
-          value={box}
-          boxes={boxes}
-          setboxes={setBoxes}
-          isX={isX}
-          setIsX={setIsX}
-        />
+      {boxes.map((box, index) => (
+        <div className={styles.box} id={box.id} key={index}>
+          <div className={styles.counter} id={box.id}>
+            {box.value}
+          </div>
+        </div>
       ))}
     </div>
   );

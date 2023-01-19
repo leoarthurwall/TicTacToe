@@ -45,7 +45,7 @@ const Board = () => {
               handleCounterClick(index);
             }}
           >
-            <div className={styles.counter}>{box.value}</div>
+            <div className={styles.counterX}>{box.value}</div>
           </div>
         ))}
       </div>

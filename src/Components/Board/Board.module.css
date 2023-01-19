@@ -16,20 +16,29 @@
 }
 
 .box {
-  background-color: #24353F;
+  background-color: #24353f;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #132027;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px 1px #132027;
+  box-shadow: 3px 4px 4px 2px #132027;
 }
 
-.counter {
+.counterX {
   font-size: 100px;
   font-weight: 800;
   font-family: sans-serif;
-  color: white;
+  color: #61c1ba;
+
+  padding: 0px;
+  margin: 0px;
+}
+.counterO {
+  font-size: 100px;
+  font-weight: 800;
+  font-family: sans-serif;
+  color: #C9A963;
 
   padding: 0px;
   margin: 0px;

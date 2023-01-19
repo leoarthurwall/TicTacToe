@@ -49,7 +49,7 @@ const Board = () => {
           </div>
         ))}
       </div>
-      <Player />
+      <Player isX={isX}/>
     </section>
   );
 };

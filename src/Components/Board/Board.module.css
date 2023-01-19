@@ -8,7 +8,6 @@
 .container {
   height: 500px;
   width: 500px;
-  background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -17,10 +16,13 @@
 }
 
 .box {
-  background-color: #1e1e1e;
+  background-color: #24353F;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #132027;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px #132027;
 }
 
 .counter {

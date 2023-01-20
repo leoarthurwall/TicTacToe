@@ -1,0 +1,17 @@
+.CircleContainer {
+    height: 30px;
+    width: 30px;
+
+    display: flex;
+    border-radius: 50%;
+    border: 20px solid #E5AB4E;
+}
+
+.CrossContainer {
+    height: 30px;
+    width: 30px;
+
+    display: flex;
+    border-radius: 50%;
+    border: 20px solid #E5AB4E;
+}

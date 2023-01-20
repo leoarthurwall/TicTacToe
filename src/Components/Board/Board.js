@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Board.module.css";
 import { useState } from "react";
 import Player from "../Player/Player";
+import OCounter from "../Counter/OCounter";
 
 const Board = () => {
   const [isX, setIsX] = useState(true);
@@ -24,7 +25,7 @@ const Board = () => {
           if (isX === true) {
             newBox.value = "X";
           } else {
-            newBox.value = "0";
+            newBox.value = "O";
           }
           setIsX(!isX);
         }
@@ -45,7 +46,8 @@ const Board = () => {
               handleCounterClick(index);
             }}
           >
-            <div className={styles.counterX}>{box.value}</div>
+            {/* <div className={styles.counterX}>{box.value}</div> */}
+            <OCounter />
           </div>
         ))}
       </div>

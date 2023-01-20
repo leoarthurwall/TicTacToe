@@ -3,6 +3,7 @@ import styles from "./Board.module.css";
 import { useState } from "react";
 import Player from "../Player/Player";
 import OCounter from "../Counter/OCounter";
+import XCounter from "../Counter/XCounter";
 
 const Board = () => {
   const [isX, setIsX] = useState(true);
@@ -46,12 +47,11 @@ const Board = () => {
               handleCounterClick(index);
             }}
           >
-            {/* <div className={styles.counterX}>{box.value}</div> */}
-            <OCounter />
+            <div className={styles.counterX}>{box.value}</div>
           </div>
         ))}
       </div>
-      <Player isX={isX}/>
+      <Player isX={isX} />
     </section>
   );
 };
@@ -85,3 +85,4 @@ map through the array and display 0 (an empty box)
 // };
 
 //  const [count, setCount] = useState(0);
+

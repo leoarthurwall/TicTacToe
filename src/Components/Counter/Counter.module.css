@@ -1,4 +1,4 @@
-.CircleContainer {
+.Circle {
     height: 30px;
     width: 30px;
 
@@ -7,7 +7,7 @@
     border: 20px solid #E5AB4E;
 }
 
-.CrossContainer {
+.Cross {
     height: 30px;
     width: 30px;
 

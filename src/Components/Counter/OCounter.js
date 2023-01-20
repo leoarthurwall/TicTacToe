@@ -3,7 +3,7 @@ import styles from "./Counter.module.css"
 
 const OCounter = () => {
   return (
-    <div className={styles.CircleContainer}>
+    <div className={styles.Circle}>
 
     </div>
   )

@@ -1,17 +1,34 @@
 .Circle {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 
-    display: flex;
-    border-radius: 50%;
-    border: 20px solid #E5AB4E;
+  display: flex;
+  border-radius: 50%;
+  border: 20px solid #e5ab4e;
 }
 
-.Cross {
-    height: 30px;
-    width: 30px;
+.CrossContainer {
+  height: 100px;
+  width: 100px;
 
-    display: flex;
-    border-radius: 50%;
-    border: 20px solid #62C0BD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.CrossTopL {
+  height: 20px;
+  width: 80px;
+  transform: rotate(45deg);
+  background-color: #62c0bd;
+  position: absolute;
+  border-radius: 5px;
+}
+.CrossTopR {
+  height: 20px;
+  width: 80px;
+  transform: rotate(135deg);
+  background-color: #62c0bd;
+  position: absolute;
+  border-radius: 5px;
 }

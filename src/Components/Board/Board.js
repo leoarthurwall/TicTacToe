@@ -57,7 +57,13 @@ const Board = () => {
               handleCounterClick(index);
             }}
           >
-            <div className={styles.counterX}>{ box.value === "X" ? <XCounter /> : box.value === "O" ? <OCounter /> : null }</div>
+            <div className={styles.counterX}>
+              {box.value === "X" ? (
+                <XCounter />
+              ) : box.value === "O" ? (
+                <OCounter />
+              ) : null}
+            </div>
           </div>
         ))}
       </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Player from "../Player/Player";
 import OCounter from "../Counter/OCounter";
 import XCounter from "../Counter/XCounter";
+import Score from "../Score/Score";
 
 const Board = () => {
   const [isX, setIsX] = useState(true);
@@ -35,19 +36,10 @@ const Board = () => {
     });
   };
 
-  const CounterStyle = boxes.map((counterColor, i) => {
-    if (counterColor.value === "X") {
-      <XCounter />;
-    } else if (counterColor.value === "O") {
-      <OCounter />;
-    } else {
-      return null;
-    }
-  });
-
   console.log({ boxes });
   return (
     <section className={styles.wrapper}>
+      <Player isX={isX} />
       <div className={styles.container}>
         {boxes.map((box, index) => (
           <div
@@ -67,7 +59,8 @@ const Board = () => {
           </div>
         ))}
       </div>
-      <Player isX={isX} />
+
+      <Score />
     </section>
   );
 };

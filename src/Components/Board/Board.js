@@ -24,9 +24,9 @@ const Board = () => {
       if (i === index) {
         if (newBox.value === "") {
           if (isX === true) {
-            newBox.value = "X";
+            let valueX = (newBox.value = "X");
           } else {
-            newBox.value = "O";
+            let valueO = (newBox.value = "O");
           }
           setIsX(!isX);
         }
@@ -34,6 +34,16 @@ const Board = () => {
       return newBox;
     });
   };
+
+  const CounterStyle = boxes.map((counterColor, i) => {
+    if (counterColor.value === "X") {
+      <XCounter />;
+    } else if (counterColor.value === "O") {
+      <OCounter />;
+    } else {
+      return null;
+    }
+  });
 
   console.log({ boxes });
   return (
@@ -47,7 +57,7 @@ const Board = () => {
               handleCounterClick(index);
             }}
           >
-            <div className={styles.counterX}>{box.value}</div>
+            <div className={styles.counterX}>{ box.value === "X" ? <XCounter /> : box.value === "O" ? <OCounter /> : null }</div>
           </div>
         ))}
       </div>
@@ -85,4 +95,3 @@ map through the array and display 0 (an empty box)
 // };
 
 //  const [count, setCount] = useState(0);
-

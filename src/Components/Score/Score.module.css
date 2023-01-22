@@ -1,6 +1,6 @@
 .container {
   margin: 50px 0;
-  height: 100px;
+  height: auto;
   width: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -10,6 +10,7 @@
 
 .button {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 8px 0px #132027;
@@ -17,6 +18,8 @@
   padding: 15px 25px;
   border-radius: 10px;
   color: black;
+  gap: 5px;
+  font-family: sans-serif;
 }
 
 .playerTag{
@@ -26,6 +29,6 @@
 
 .scoreTag{
     margin: 0;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 800;
 }

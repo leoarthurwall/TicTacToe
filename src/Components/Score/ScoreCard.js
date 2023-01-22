@@ -1,9 +1,12 @@
 import React from 'react'
 import styles from "./Score.module.css"
 
-const ScoreCard = () => {
+const ScoreCard = ({}) => {
   return (
-    <div>ScoreCard</div>
+    <div className={styles.button}>
+        <p className={styles.playerTag}></p>
+        <p className={styles.scoreTag}></p>
+    </div>
   )
 }
 

@@ -16,4 +16,16 @@
   background-color: #24353f;
   padding: 15px 25px;
   border-radius: 10px;
+  color: black;
+}
+
+.playerTag{
+    margin: 0;
+    font-size: 14px;
+}
+
+.scoreTag{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
 }

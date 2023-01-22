@@ -1,13 +1,13 @@
-import React from 'react'
-import styles from "./Score.module.css"
+import React from "react";
+import styles from "./Score.module.css";
 
-const ScoreCard = ({}) => {
+const ScoreCard = ({ name, score, style }) => {
   return (
-    <div className={styles.button}>
-        <p className={styles.playerTag}></p>
-        <p className={styles.scoreTag}></p>
+    <div className={styles.button} style={style}>
+      <p className={styles.playerTag}>{name}</p>
+      <p className={styles.scoreTag}>{score}</p>
     </div>
-  )
-}
+  );
+};
 
-export default ScoreCard
+export default ScoreCard;

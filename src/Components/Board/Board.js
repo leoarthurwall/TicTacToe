@@ -5,6 +5,7 @@ import Player from "../Player/Player";
 import OCounter from "../Counter/OCounter";
 import XCounter from "../Counter/XCounter";
 import Score from "../Score/Score";
+import Reset from "../Reset/Reset";
 
 const Board = () => {
   const [isX, setIsX] = useState(true);
@@ -40,6 +41,7 @@ const Board = () => {
   return (
     <section className={styles.wrapper}>
       <Player isX={isX} />
+      <Reset />
       <div className={styles.container}>
         {boxes.map((box, index) => (
           <div

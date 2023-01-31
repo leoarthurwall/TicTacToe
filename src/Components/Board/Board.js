@@ -40,8 +40,10 @@ const Board = () => {
   console.log({ boxes });
   return (
     <section className={styles.wrapper}>
-      <Player isX={isX} />
-      <Reset />
+      <div className={styles.top}>
+        <Player isX={isX} />
+        <Reset />
+      </div>
       <div className={styles.container}>
         {boxes.map((box, index) => (
           <div

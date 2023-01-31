@@ -41,6 +41,7 @@ const Board = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.top}>
+        <Reset />
         <Player isX={isX} />
         <Reset />
       </div>

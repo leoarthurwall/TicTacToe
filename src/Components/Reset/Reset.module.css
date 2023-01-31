@@ -1,6 +1,14 @@
-.container {
+.gridWrapper {
     height: auto;
-    width: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container {
+    height: 40px;
+    width: 40px;
     padding: 10px;
     border-radius: 10px;
     background-color: #8E9DA5;

@@ -16,9 +16,9 @@
 }
 .top {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
-  align-items: center;
 }
 
 .box {
@@ -43,7 +43,7 @@
   font-size: 100px;
   font-weight: 800;
   font-family: sans-serif;
-  color: #C9A963;
+  color: #c9a963;
 
   padding: 0px;
   margin: 0px;

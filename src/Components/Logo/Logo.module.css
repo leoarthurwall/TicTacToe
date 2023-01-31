@@ -4,4 +4,40 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+
 }
+.Circle {
+    height: 15px;
+    width: 15px;
+  
+    display: flex;
+    border-radius: 50%;
+    border: 15px solid #e5ab4e;
+  }
+  
+  .CrossContainer {
+    height: 50px;
+    width: 50px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .CrossTopL {
+    height: 15px;
+    width: 55px;
+    transform: rotate(45deg);
+    background-color: #62c0bd;
+    position: absolute;
+    border-radius: 5px;
+  }
+  .CrossTopR {
+    height: 15px;
+    width: 55px;
+    transform: rotate(135deg);
+    background-color: #62c0bd;
+    position: absolute;
+    border-radius: 5px;
+  }
+  

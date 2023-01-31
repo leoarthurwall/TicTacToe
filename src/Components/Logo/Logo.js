@@ -1,16 +1,16 @@
-import React from 'react'
-import styles from "./Logo.module.css"
-import OCounter from '../Counter/OCounter'
-import XCounter from '../Counter/XCounter'
-
+import React from "react";
+import styles from "./Logo.module.css";
 
 const Logo = () => {
   return (
     <div className={styles.container}>
-        <XCounter />
-        <OCounter />
+      <div className={styles.CrossContainer}>
+        <div className={styles.CrossTopL} />
+        <div className={styles.CrossTopR} />
+      </div>
+      <div className={styles.Circle}></div>
     </div>
-  )
-}
+  );
+};
 
-export default Logo
+export default Logo;

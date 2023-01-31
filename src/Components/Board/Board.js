@@ -6,6 +6,7 @@ import OCounter from "../Counter/OCounter";
 import XCounter from "../Counter/XCounter";
 import Score from "../Score/Score";
 import Reset from "../Reset/Reset";
+import Logo from "../Logo/Logo";
 
 const Board = () => {
   const [isX, setIsX] = useState(true);
@@ -41,7 +42,7 @@ const Board = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.top}>
-        <Reset />
+        <Logo />
         <Player isX={isX} />
         <Reset />
       </div>
